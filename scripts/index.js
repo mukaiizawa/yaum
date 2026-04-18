@@ -29,4 +29,9 @@ export default [
     runAt: 'document_start',
     file: 'scripts/wikiwiki.js',
   },
+  {
+    urlPattern: 'https?://([a-z0-9-]+\\.)?reddit\\.com/.*',
+    runAt: 'document_start',
+    file: 'scripts/reddit.js',
+  },
 ];
