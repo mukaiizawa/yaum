@@ -24,11 +24,8 @@ async function syncUserScripts() {
     await chrome.userScripts.unregister();
 
     const scripts = await loadScripts();
-    const enabled = scripts.filter(s => s.enabled);
-    if (enabled.length === 0) return;
-
     await chrome.userScripts.register(
-      enabled.map((script, i) => {
+      scripts.map((script, i) => {
         const { matches, code } = buildRegistration(script);
         return {
           id: String(i),
