@@ -3,15 +3,27 @@
   "name": "yaum",
   "version": "1.0.0",
   "description": "Yet Another Userscript Manager for injecting custom scripts into pages on load.",
+  "icons": {
+    "16": "icons/icon-on-16.png",
+    "32": "icons/icon-on-32.png",
+    "48": "icons/icon-on-48.png",
+    "128": "icons/icon-on-128.png"
+  },
   "permissions": [
     "userScripts",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "host_permissions": [
     "<all_urls>"
   ],
   "action": {
-    "default_title": "Reload yaum"
+    "default_icon": {
+      "16": "icons/icon-on-16.png",
+      "32": "icons/icon-on-32.png",
+      "48": "icons/icon-on-48.png"
+    },
+    "default_title": "Toggle yaum for this site"
   },
   "background": {
     "service_worker": "background.js",

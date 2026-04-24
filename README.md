@@ -62,6 +62,16 @@ document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
 └── options.css     # Styles
 ```
 
+## Icon Workflow
+
+- Edit `icons/icon-on-128.png` and `icons/icon-off-128.png`
+- Regenerate `16/32/48/128` variants with `Pillow`:
+
+```bash
+python -m pip install Pillow
+python .\icons\generate_icons.py
+```
+
 ## Requirements
 
 - Google Chrome 120+ (`userScripts` API)
